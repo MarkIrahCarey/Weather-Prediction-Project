@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import joblib as jb
 import warnings
-import random as rand
+import random 
 
 # Suppress all warnings beacuse they are annoying
 warnings.filterwarnings('ignore')
@@ -95,7 +95,6 @@ list_ = [[13.4443, 144.7937],  # Central Guam
 
 
 lat, long = 13.4443, 144.7937
-import random
 
 # Generate 23 random windspeed values (between 10 and 20)
 winspeed = [round(random.uniform(10, 20), 2) for _ in range(24)]

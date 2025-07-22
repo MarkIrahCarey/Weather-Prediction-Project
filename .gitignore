@@ -2,7 +2,6 @@
 .DS_Store
 
 # Ignore data files
-*.csv
 *.log
 
 # Ignore models
