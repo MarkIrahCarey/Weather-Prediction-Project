@@ -25,6 +25,7 @@ The model performs **interpolation with ~90% accuracy**, but its **extrapolation
 
 ## Features
 
+- Source code to **combine** datasets 
 - Source code to **train** the Random Forest model
 - Python Script to **test and evaluate** the model
 - Sample dataset (~59MB) covering 5 years of weather in Guam  
