@@ -1,5 +1,5 @@
 # Weather Prediction Project
-A machine learning project created for my **Organization of Programming Languages** course.  
+A machine learning project created for my **Senior Project**.  
 It predicts temperatures in **Guam** using a Random Forest model built with `scikit-learn`.
 
 The model performs **interpolation with ~90% accuracy**, but its **extrapolation** ability degrades after about one month, leading to **overfitting** and instability.
