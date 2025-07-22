@@ -12,10 +12,10 @@ for filename in os.listdir(folder_path):
         df = pd.read_csv(file_path, parse_dates=['datetime'])
 
         # Reduce the training set
-        df = df[
-            (df['datetime'].dt.date == pd.to_datetime('2024-05-25').date()) &
-            (df['datetime'].dt.hour == 3)
-        ]
+        start_date = pd.to_datetime("2019-01-01")
+        end_date = pd.to_datetime("2024-12-31")
+
+        df = df[(df['datetime'] >= start_date) & (df['datetime'] <= end_date)]
 
 
         # Standardize column names
@@ -49,5 +49,5 @@ full_df['windspeed'] = full_df['windspeed'].fillna(0)
 save_df = full_df[['datetime', 'latitude', 'longitude', 'hour', 'windspeed', 'precipitation', 'day_sin', 'day_cos', 'temperature']]
 
 # Save and download
-save_path = "/content/combined_weather_data.csv"
+save_path = "/content/combined_weather_data_reduced.csv"
 save_df.to_csv(save_path, index=False)
